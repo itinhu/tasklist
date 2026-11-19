@@ -1,0 +1,120 @@
+
+:root {
+  --cor-texto: #1f2937;
+  --cor-suave: #4b5563;
+  --cor-fundo: #f4f6f8;
+  --cor-superficie: #ffffff;
+  --cor-borda: #d5dbe1;
+  --cor-destaque: #0f766e;
+
+  --espaco: clamp(1rem, 2.5vw, 1.5rem);
+  --raio: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+}
+
+h2 {
+  margin-bottom: var(--espaco);
+  font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.625rem);
+}
+
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+.cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem var(--espaco);
+  padding: var(--espaco);
+  background: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.cabecalho__subtitulo {
+  color: var(--cor-suave);
+}
+
+.principal {
+  flex: 1;
+  width: min(100% - 2 * var(--espaco), 48rem);
+  margin-inline: auto;
+  padding-block: calc(var(--espaco) * 1.5);
+}
+
+.tarefas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: var(--espaco);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tarefa {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: var(--espaco);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.tarefa input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.2rem 0 0;
+  accent-color: var(--cor-destaque);
+}
+
+.tarefa label {
+  font-weight: 600;
+}
+
+.tarefa__texto p {
+  margin-top: 0.25rem;
+  font-size: 0.9em;
+  color: var(--cor-suave);
+}
+
+.rodape {
+  padding: var(--espaco);
+  text-align: center;
+  color: var(--cor-suave);
+  border-top: 1px solid var(--cor-borda);
+}
