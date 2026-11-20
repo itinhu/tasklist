@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista de tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>Lista de tarefas</h1>
+    <p class="cabecalho__subtitulo">Organize o que precisa ser feito.</p>
+  </header>
+
+  <main class="principal">
+    <section aria-labelledby="titulo-tarefas">
+      <h2 id="titulo-tarefas">Minhas tarefas</h2>
+
+      <ul class="tarefas">
+        <li class="tarefa">
+          <input type="checkbox" id="tarefa-1" aria-describedby="tarefa-1-descricao">
+          <div class="tarefa__texto">
+            <label for="tarefa-1">Montar a estrutura da página</label>
+            <p id="tarefa-1-descricao">Criar header, main e footer com HTML semântico.</p>
+          </div>
+        </li>
+
+        <li class="tarefa">
+          <input type="checkbox" id="tarefa-2" aria-describedby="tarefa-2-descricao">
+          <div class="tarefa__texto">
+            <label for="tarefa-2">Testar no celular</label>
+            <p id="tarefa-2-descricao">Conferir espaçamentos e tamanho do texto em telas pequenas.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p><small>Primeira versão do projeto da lista de tarefas.</small></p>
+  </footer>
+</body>
+</html>
