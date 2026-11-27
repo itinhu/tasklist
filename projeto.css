@@ -135,3 +135,9 @@ button { padding: .7rem 1rem; border: 0; border-radius: var(--raio); background:
 @keyframes girar { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .spinner:not([hidden]) { animation-duration: 2s; } }
 button:disabled { opacity: .7; cursor: wait; }
+
+:root { --cor-erro: #a21c25; }
+:root[data-tema="escuro"] { color-scheme: dark; --cor-texto: #f1f5f9; --cor-suave: #cbd5e1; --cor-fundo: #101820; --cor-superficie: #1e2936; --cor-borda: #64748b; --cor-destaque: #5eead4; --cor-erro: #fca5a5; }
+:root[data-tema="escuro"] button:not(.filtros button), :root[data-tema="escuro"] .filtros button[aria-pressed="true"] { color: #10252a; }
+.erro { color: var(--cor-erro); }
+.formulario input { background: var(--cor-superficie); color: var(--cor-texto); }
