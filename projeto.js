@@ -16,6 +16,7 @@ formulario.addEventListener('submit', (evento) => {
   rotulo.textContent = texto;
   item.append(caixa, rotulo);
   lista.append(item);
+  atualizarFiltro();
   campo.value = '';
   campo.focus();
 });

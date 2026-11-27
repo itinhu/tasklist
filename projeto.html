@@ -22,6 +22,12 @@
         <button type="submit">Adicionar</button>
       </form>
       <ul class="tarefas" id="lista-tarefas">
+      <div class="filtros" role="group" aria-label="Filtrar tarefas">
+        <button type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+        <button type="button" data-filtro="pendentes" aria-pressed="false">Pendentes</button>
+        <button type="button" data-filtro="concluidas" aria-pressed="false">Concluídas</button>
+      </div>
+      <ul class="tarefas" id="lista-tarefas">
         <li class="tarefa">
           <input type="checkbox" id="tarefa-1" aria-describedby="tarefa-1-descricao">
           <div class="tarefa__texto">
@@ -45,5 +51,6 @@
     <p><small>Primeira versão do projeto da lista de tarefas.</small></p>
   </footer>
   <script src="projeto.js" defer></script>
+  <script src="filtros.js" defer></script>
 </body>
 </html>
