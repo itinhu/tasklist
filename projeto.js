@@ -4,7 +4,20 @@ const lista = document.querySelector('#lista-tarefas');
 formulario.addEventListener('submit', (evento) => {
   evento.preventDefault();
   const texto = campo.value.trim();
-  if (!texto) return;
+  const erro = document.querySelector('#erro-tarefa');
+  if (!texto) {
+    erro.textContent = 'Digite uma tarefa antes de adicionar.';
+    campo.setAttribute('aria-invalid', 'true');
+    campo.focus();
+    return;
+  }
+  erro.textContent = '';
+  campo.removeAttribute('aria-invalid');
+  const botao = formulario.querySelector('button');
+  const spinner = formulario.querySelector('.spinner');
+  botao.disabled = true;
+  spinner.hidden = false;
+  setTimeout(() => {
   const item = document.createElement('li');
   item.className = 'tarefa';
   const caixa = document.createElement('input');
@@ -18,5 +31,8 @@ formulario.addEventListener('submit', (evento) => {
   lista.append(item);
   atualizarFiltro();
   campo.value = '';
+  spinner.hidden = true;
+  botao.disabled = false;
   campo.focus();
+  }, 300);
 });

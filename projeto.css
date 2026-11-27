@@ -128,3 +128,10 @@ button { padding: .7rem 1rem; border: 0; border-radius: var(--raio); background:
 .filtros button[aria-pressed="true"] { background: var(--cor-destaque); color: white; }
 .tarefa:has(input:checked) { border-color: var(--cor-destaque); }
 .tarefa[hidden] { display: none; }
+
+.erro { width: 100%; color: #a21c25; font-size: .9rem; }
+.erro:empty { display: none; }
+.spinner:not([hidden]) { display: inline-block; width: 1em; height: 1em; margin-right: .5em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: girar .7s linear infinite; vertical-align: -.15em; }
+@keyframes girar { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spinner:not([hidden]) { animation-duration: 2s; } }
+button:disabled { opacity: .7; cursor: wait; }
