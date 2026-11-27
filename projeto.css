@@ -118,3 +118,8 @@ p {
   color: var(--cor-suave);
   border-top: 1px solid var(--cor-borda);
 }
+.formulario { display: flex; flex-wrap: wrap; gap: .75rem; align-items: end; margin-bottom: var(--espaco); }
+.formulario label { width: 100%; font-weight: 600; }
+.formulario input { flex: 1 1 14rem; padding: .7rem; border: 1px solid var(--cor-borda); border-radius: var(--raio); font: inherit; }
+button { padding: .7rem 1rem; border: 0; border-radius: var(--raio); background: var(--cor-destaque); color: white; font: inherit; cursor: pointer; }
+.tarefa:has(input:checked) label { text-decoration: line-through; color: var(--cor-suave); }
