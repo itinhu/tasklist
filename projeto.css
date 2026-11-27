@@ -118,3 +118,8 @@ p {
   color: var(--cor-suave);
   border-top: 1px solid var(--cor-borda);
 }
+.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: var(--espaco); }
+.filtros button { padding: .5rem .8rem; border: 1px solid var(--cor-destaque); border-radius: var(--raio); background: var(--cor-superficie); color: var(--cor-texto); cursor: pointer; font: inherit; }
+.filtros button[aria-pressed="true"] { background: var(--cor-destaque); color: white; }
+.tarefa:has(input:checked) { border-color: var(--cor-destaque); }
+.tarefa[hidden] { display: none; }

@@ -16,6 +16,11 @@
     <section aria-labelledby="titulo-tarefas">
       <h2 id="titulo-tarefas">Minhas tarefas</h2>
 
+      <div class="filtros" role="group" aria-label="Filtrar tarefas">
+        <button type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+        <button type="button" data-filtro="pendentes" aria-pressed="false">Pendentes</button>
+        <button type="button" data-filtro="concluidas" aria-pressed="false">Conclu?das</button>
+      </div>
       <ul class="tarefas">
         <li class="tarefa">
           <input type="checkbox" id="tarefa-1" aria-describedby="tarefa-1-descricao">
@@ -39,5 +44,6 @@
   <footer class="rodape">
     <p><small>Primeira versão do projeto da lista de tarefas.</small></p>
   </footer>
+  <script src="filtros.js" defer></script>
 </body>
 </html>
