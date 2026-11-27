@@ -18,8 +18,9 @@
 
       <form class="formulario" id="formulario">
         <label for="nova-tarefa">Nova tarefa</label>
-        <input id="nova-tarefa" type="text" autocomplete="off">
-        <button type="submit">Adicionar</button>
+        <input id="nova-tarefa" type="text" autocomplete="off" aria-describedby="erro-tarefa">
+        <button type="submit"><span class="spinner" hidden aria-hidden="true"></span><span>Adicionar</span></button>
+        <p id="erro-tarefa" class="erro" role="alert"></p>
       </form>
       <ul class="tarefas" id="lista-tarefas">
       <div class="filtros" role="group" aria-label="Filtrar tarefas">
