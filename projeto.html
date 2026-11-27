@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lista de tarefas</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projeto.css">
 </head>
 <body>
   <header class="cabecalho">
@@ -16,7 +16,19 @@
     <section aria-labelledby="titulo-tarefas">
       <h2 id="titulo-tarefas">Minhas tarefas</h2>
 
-      <ul class="tarefas">
+      <form class="formulario" id="formulario">
+        <label for="nova-tarefa">Nova tarefa</label>
+        <input id="nova-tarefa" type="text" autocomplete="off" aria-describedby="erro-tarefa">
+        <button type="submit"><span class="spinner" hidden aria-hidden="true"></span><span>Adicionar</span></button>
+        <p id="erro-tarefa" class="erro" role="alert"></p>
+      </form>
+      <ul class="tarefas" id="lista-tarefas">
+      <div class="filtros" role="group" aria-label="Filtrar tarefas">
+        <button type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+        <button type="button" data-filtro="pendentes" aria-pressed="false">Pendentes</button>
+        <button type="button" data-filtro="concluidas" aria-pressed="false">Concluídas</button>
+      </div>
+      <ul class="tarefas" id="lista-tarefas">
         <li class="tarefa">
           <input type="checkbox" id="tarefa-1" aria-describedby="tarefa-1-descricao">
           <div class="tarefa__texto">
@@ -39,5 +51,7 @@
   <footer class="rodape">
     <p><small>Primeira versão do projeto da lista de tarefas.</small></p>
   </footer>
+  <script src="projeto.js" defer></script>
+  <script src="filtros.js" defer></script>
 </body>
 </html>
